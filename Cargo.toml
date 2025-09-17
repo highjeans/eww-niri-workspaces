@@ -1,6 +1,6 @@
 [package]
 name = "eww-niri-workspaces"
-version = "0.2.0"
+version = "25.8.0"
 edition = "2021"
 
 [dependencies]
