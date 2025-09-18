@@ -14,7 +14,7 @@ fn main() {
     if matches!(reply, Ok(Response::Handled)) {
         let mut read_event = socket.read_events(); // ownership moves here
         while let Ok(event) = read_event() {
-            println!("Received event: {event:?}");
+            eprintln!("Received event: {event:?}");
             state.update_with_event(event);
             let serializable_state = serializable::SerializableState::from(&state);
             let json = serde_json::to_string(&serializable_state).unwrap();
